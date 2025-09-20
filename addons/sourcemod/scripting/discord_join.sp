@@ -5,9 +5,9 @@
 
 public Plugin myinfo = {
 	name = "Discord Join Event",
-	author = "Spaenny",
+	author = "Spaenny, DNA.styx",
 	description = "Announces fully joined players in the Discord",
-	version = "1.0.0",
+	version = "1.0.1",
 	url = "github.com/Spaenny"
 };
 
@@ -46,7 +46,7 @@ public Action:Event_PlayerConnect(Event event, const char[] name, bool dontBroad
 	
 	char sMessage[512];
 	
-	Format(sMessage, sizeof(sMessage), "%s has just joined the \"%s\"!", nick, hostname);
+	Format(sMessage, sizeof(sMessage), "**%s** has joined", nick);
 	SendMessageToDiscord(sChannel, sMessage);
 	
 	return Plugin_Continue;
@@ -81,7 +81,7 @@ public Action:Event_PlayerDisconnect(Event event, const char[] name, bool dontBr
 
 	char sMessage[512];
 	
-	Format(sMessage, sizeof(sMessage), "%s has just disconnected from the \"%s\"! (%s)", nick, hostname, reason);
+	Format(sMessage, sizeof(sMessage), "**%s** has disconnected (%s)", nick, reason);
 	SendMessageToDiscord(sChannel, sMessage);
 	
 	return Plugin_Continue;
