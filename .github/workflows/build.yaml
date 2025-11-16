@@ -20,7 +20,7 @@ jobs:
         run: |
           SOURCEMOD_PATH=$GITHUB_WORKSPACE
           echo "SOURCEMOD_PATH=$SOURCEMOD_PATH" >> $GITHUB_ENV
-          echo "SCRIPTING_PATH=$SOURCEMOD_PATH/scripting" >> $GITHUB_ENV
+          echo "SCRIPTING_PATH=$SOURCEMOD_PATH/addons/sourcemod/scripting" >> $GITHUB_ENV
 
       - name: Setup SourcePawn Compiler ${{ matrix.SM_VERSION }}
         uses: rumblefrog/setup-sp@v1.2.4
