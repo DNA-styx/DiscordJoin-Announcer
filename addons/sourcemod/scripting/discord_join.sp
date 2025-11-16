@@ -7,7 +7,7 @@ public Plugin myinfo = {
 	name = "Discord Join Event",
 	author = "Spaenny, DNA.styx",
 	description = "Announces fully joined players in the Discord",
-	version = "1.0.1.1",
+	version = "1.0.1.2",
 	url = "github.com/Spaenny"
 };
 
