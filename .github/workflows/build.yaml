@@ -1,6 +1,9 @@
 name: Test build
 
-on: [push, pull_request, workflow_dispatch]
+on: 
+  push:
+    paths:
+    - 'addons/sourcemod/scripting/**'
 
 jobs:
   build:
